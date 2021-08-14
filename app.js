@@ -6,7 +6,7 @@ async function alertDuration({ target: { files } }) {
 
     // Wait for the video to finish loading
     await new Promise(resolve => (video.addEventListener('durationchange', () => resolve())))
-
+    console.log(`Video duration is ${video.duration}s`)
     alert(`Video duration is ${video.duration}s`)
     video.remove()
 }
